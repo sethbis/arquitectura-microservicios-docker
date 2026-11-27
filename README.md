@@ -1,10 +1,10 @@
-# 🚀 Arquitectura de Microservicios con APIs Multilenguaje, SQLite y Docker
+# Arquitectura de Microservicios con APIs Multilenguaje, SQLite y Docker
 
 Solución desarrollada para la materia de **Arquitectura en la Nube**. Implementa cuatro microservicios completamente independientes, desarrollados en diferentes lenguajes de programación (**Python, Java, Go y JavaScript**), cada uno con su propio contenedor Docker, su propia base de datos relacional SQLite y persistencia garantizada mediante volúmenes Docker independientes gestionados por Docker Compose.
 
 ---
 
-## 🏛️ Arquitectura del Sistema
+## Arquitectura del Sistema
 
 ```
                     ┌───────────────────────────────────────────┐
@@ -37,7 +37,7 @@ Solución desarrollada para la materia de **Arquitectura en la Nube**. Implement
 
 ---
 
-## 📂 Estructura del Repositorio
+## Estructura del Repositorio
 
 ```text
 .
@@ -65,7 +65,7 @@ Solución desarrollada para la materia de **Arquitectura en la Nube**. Implement
 
 ---
 
-## ⚡ Ejecución Rápida con Docker Compose
+## Ejecución Rápida con Docker Compose
 
 ### 1. Clonar el repositorio
 ```bash
@@ -98,7 +98,7 @@ docker compose logs -f
 
 ---
 
-## 🧪 Pruebas de Endpoints (Guía Completa con `curl`)
+## Pruebas de Endpoints (Guía Completa con `curl`)
 
 ### 1. Users API — Python (Puerto 8000)
 
@@ -238,7 +238,7 @@ docker compose logs -f
 
 ---
 
-## 💾 Demostración y Validación de Persistencia SQLite
+## Demostración y Validación de Persistencia SQLite
 
 Para demostrar que los datos **NO se pierden** al detener, eliminar o recrear los contenedores:
 
@@ -257,11 +257,11 @@ Para demostrar que los datos **NO se pierden** al detener, eliminar o recrear lo
    curl -X GET http://localhost:8000/users
    curl -X GET http://localhost:8003/products
    ```
-   ✅ Los registros creados siguen intactos, comprobando la persistencia y el aislamiento de cada base de datos SQLite en su volumen independiente.
+   Los registros creados siguen intactos, comprobando la persistencia y el aislamiento de cada base de datos SQLite en su volumen independiente.
 
 ---
 
-## 🛑 Detener y Limpiar la Arquitectura
+## Detener y Limpiar la Arquitectura
 
 * **Detener los servicios sin perder los datos:**
   ```bash
@@ -278,7 +278,7 @@ Para demostrar que los datos **NO se pierden** al detener, eliminar o recrear lo
 
 ---
 
-## 🌿 Estrategia de Ramas Git Utilizada
+## Estrategia de Ramas Git Utilizada
 
 Siguiendo las mejores prácticas de integración continua y control de versiones, el desarrollo se organizó en ramas descriptivas de funcionalidad (`feat/...`):
 
