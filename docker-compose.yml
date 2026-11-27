@@ -1,0 +1,65 @@
+services:
+  users-api:
+    build:
+      context: ./users-api
+      dockerfile: Dockerfile
+    container_name: users-service
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_PATH=/app/data/users.db
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - users_data:/app/data
+    restart: unless-stopped
+
+  auth-api:
+    build:
+      context: ./auth-api
+      dockerfile: Dockerfile
+    container_name: auth-service
+    ports:
+      - "8001:8001"
+    environment:
+      - DB_PATH=/app/data/auth.db
+    volumes:
+      - auth_data:/app/data
+    restart: unless-stopped
+
+  orders-api:
+    build:
+      context: ./orders-api
+      dockerfile: Dockerfile
+    container_name: orders-service
+    ports:
+      - "8002:8002"
+    environment:
+      - DB_PATH=/app/data/orders.db
+      - PORT=8002
+    volumes:
+      - orders_data:/app/data
+    restart: unless-stopped
+
+  products-api:
+    build:
+      context: ./products-api
+      dockerfile: Dockerfile
+    container_name: products-service
+    ports:
+      - "8003:8003"
+    environment:
+      - DB_PATH=/app/data/products.db
+      - PORT=8003
+    volumes:
+      - products_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  users_data:
+    name: users_sqlite_data
+  auth_data:
+    name: auth_sqlite_data
+  orders_data:
+    name: orders_sqlite_data
+  products_data:
+    name: products_sqlite_data
