@@ -1,0 +1,13 @@
+{
+  "name": "products-api",
+  "version": "1.0.0",
+  "description": "Products Microservice in JavaScript/Node.js with SQLite",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7"
+  }
+}
