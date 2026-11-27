@@ -1,0 +1,33 @@
+# Data & SQLite Databases
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Java
+target/
+build/
+.gradle/
+*.class
+*.jar
+
+# Go
+bin/
+
+# Environment & IDE
+.env
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
